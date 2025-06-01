@@ -40,6 +40,21 @@ E-commerce/
 3. Navega por el catálogo y añade productos al carrito
 4. Para finalizar la compra, completa el formulario y envía el pedido
 
+## Despliegue en GitHub Pages
+
+Para desplegar este proyecto en GitHub Pages:
+
+1. Sube el proyecto a un repositorio de GitHub:
+   ```
+   git remote add origin https://github.com/TU_USUARIO/essencity-parfums.git
+   git branch -M main
+   git push -u origin main
+   ```
+2. Ve a la configuración del repositorio en GitHub
+3. En la sección "GitHub Pages", selecciona la rama main como fuente
+4. Guarda los cambios y espera unos minutos
+5. Tu sitio estará disponible en https://TU_USUARIO.github.io/essencity-parfums/
+
 ## Personalización
 
 ### Agregar nuevos productos
@@ -80,6 +95,17 @@ Los estilos principales se pueden modificar editando las variables CSS en el arc
 - Pasarela de pagos
 - Sistema de valoraciones y comentarios
 - Panel de administración para gestionar productos
+- Optimización de imágenes para mejorar el rendimiento
+
+## Contribuir al proyecto
+
+Si deseas contribuir a este proyecto:
+
+1. Haz un fork del repositorio
+2. Crea una rama para tu característica (`git checkout -b feature/nueva-caracteristica`)
+3. Realiza tus cambios y haz commit (`git commit -m 'Añade nueva característica'`)
+4. Sube los cambios a tu fork (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
 
 ## Licencia
 
