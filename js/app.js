@@ -424,10 +424,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         showNotification('¡Gracias por tu pedido!');
     }
-    
-    // Función para generar archivo de pedido
+      // Función para generar archivo de pedido
     function generateOrderFile(name, email, phone, address, total) {
-        let orderText = `PEDIDO - ESSENCE PERFUMERÍA\n`;
+        let orderText = `PEDIDO - ESSENCITY PARFUMS\n`;
         orderText += `Fecha: ${new Date().toLocaleDateString()}\n\n`;
         orderText += `DATOS DEL CLIENTE:\n`;
         orderText += `Nombre: ${name}\n`;
