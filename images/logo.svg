@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <style>
+    .st0{fill:#D4AF37;}
+    .st1{fill:#FFFFFF;}
+  </style>
+  <circle cx="100" cy="100" r="90" fill="#000000"/>
+  <path class="st0" d="M100,20c44.1,0,80,35.9,80,80s-35.9,80-80,80s-80-35.9-80-80S55.9,20,100,20 M100,10C50.3,10,10,50.3,10,100s40.3,90,90,90s90-40.3,90-90S149.7,10,100,10L100,10z"/>
+  <g>
+    <path class="st0" d="M40,90c0-33.1,26.9-60,60-60c16.5,0,31.5,6.7,42.4,17.6"/>
+    <path class="st0" d="M160,110c0,33.1-26.9,60-60,60c-16.5,0-31.5-6.7-42.4-17.6"/>
+  </g>
+  <path class="st0" d="M68.5,85c0,0,11.5-5,31.5-5s31.5,5,31.5,5v40c0,0-11.5,5-31.5,5s-31.5-5-31.5-5V85z"/>
+  <rect x="95" y="50" width="10" height="35" class="st0"/>
+  <ellipse cx="100" cy="85" rx="31.5" ry="5" fill="#000000"/>
+  <text x="50" y="105" fill="#FFFFFF" font-family="Arial" font-weight="bold" font-size="14">ESSENCITY</text>
+  <text x="65" y="120" fill="#FFFFFF" font-family="Arial" font-size="10">PARFUMS</text>
+</svg>
