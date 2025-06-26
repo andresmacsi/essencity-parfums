@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#111111"/>
+  <ellipse cx="100" cy="70" rx="40" ry="20" fill="#000000" stroke="#d4af37" stroke-width="2"/>
+  <rect x="80" y="70" width="40" height="80" fill="#000000" stroke="#d4af37" stroke-width="2"/>
+  <text x="100" y="135" font-family="Arial" font-size="12" text-anchor="middle" fill="#d4af37">J'ADORE</text>
+  <text x="100" y="150" font-family="Arial" font-size="12" text-anchor="middle" fill="#d4af37">DIOR</text>
+</svg>
