@@ -122,12 +122,12 @@ const productsData = {
         },
         {
             id: 'w2',
-            name: 'J\'adore',
-            brand: 'Dior',
-            price: 444375,
+            name: 'Lattafa Yara Candy Edp 100 ml',
+            brand: 'Lattafa',
+            price: 270000,
             category: 'floral',
-            description: 'Fragancia floral sofisticada con notas de mandarina, jazmín y rosa.',
-            image: 'images/products/jadore-custom.svg'
+            description: 'Una fragancia floral gourmand con notas de flores blancas, frutos rojos y vainilla dulce. Ideal para un toque femenino y encantador.',
+            image: 'images/products/Lattafa-Yara-Candy'
         },
         {
             id: 'w3',
