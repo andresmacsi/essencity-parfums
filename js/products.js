@@ -115,10 +115,10 @@ const productsData = {
             id: 'w1',
             name: 'Lattafa Yara eau de parfum 100 ml',
             brand: 'Lattafa',
-            price: 350000,
+            price: 235000,
             category: 'oriental',
             description: 'Una fragancia oriental exquisita con notas de jazmín, rosa damascena y ámbar. Ideal para ocasiones especiales.',
-            image: 'images/products/D_NQ_NP_2X_623050-MLA80080085336_102024-F.webp'
+            image: 'images/products/lattafa-yara.webp'
         },
         {
             id: 'w2',
