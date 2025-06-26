@@ -26,7 +26,7 @@ content = content.replace(/image: 'images\/products\/([^']*\.jpg)'/g, function(m
       p1.includes('black-opium') || p1.includes('daisy') || p1.includes('chance') ||
       p1.includes('miss-dior') || p1.includes('flowerbomb') || p1.includes('si') ||
       p1.includes('bloom') || p1.includes('light-blue')) {
-    return "image: 'images/products/women-placeholder.svg'";
+    return "image: 'images/products/D_NQ_NP_2X_623050-MLA80080085336_102024-F.webp";
   }
   return match;
 });
