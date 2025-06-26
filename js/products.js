@@ -121,13 +121,13 @@ const productsData = {
             image: 'images/products/lattafa-yara.webp'
         },
         {
-            id: 'w2',
-            name: 'Lattafa Yara Candy Edp 100 ml',
-            brand: 'Lattafa',
-            price: 270000,
-            category: 'floral',
-            description: 'Una fragancia floral gourmand con notas de flores blancas, frutos rojos y vainilla dulce. Ideal para un toque femenino y encantador.',
-            image: 'images/products/lattafa-yara.webp'
+        id: 'w2',
+        name: 'Lattafa Yara Candy Edp 100 ml',
+        brand: 'Lattafa',
+        price: 270000,
+        category: 'floral gourmand',
+        description: 'Una fragancia floral gourmand con notas de flores blancas, frutos rojos y vainilla dulce. Ideal para un toque femenino y encantador.',
+        image: 'images/products/Lattafa-Yara-Candy.webp'
         },
         {
             id: 'w3',
