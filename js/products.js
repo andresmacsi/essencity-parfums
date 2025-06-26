@@ -113,12 +113,12 @@ const productsData = {
     women: [
         {
             id: 'w1',
-            name: 'Coco Mademoiselle',
-            brand: 'Chanel',
-            price: 474750,
+            name: 'Lattafa Yara eau de parfum 100 ml',
+            brand: 'Lattafa',
+            price: 350000,
             category: 'oriental',
-            description: 'Fragancia oriental y fresca con notas de naranja, jazmín y pachulí.',
-            image: 'images/products/women-placeholder.svg'
+            description: 'Una fragancia oriental exquisita con notas de jazmín, rosa damascena y ámbar. Ideal para ocasiones especiales.',
+            image: 'images/products/D_NQ_NP_2X_623050-MLA80080085336_102024-F.webp'
         },
         {
             id: 'w2',
