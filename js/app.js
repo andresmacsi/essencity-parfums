@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="brand">${product.brand}</p>
                     <p class="description">${product.description}</p>
                     <p class="price">
-                        ${isDiscounted ? `<span style="text-decoration: line-through; color: #888; margin-right: 10px;">${product.oldPrice.toFixed(2)} €</span>` : ''}
-                        ${product.price.toFixed(2)} €
+                        ${isDiscounted ? `<span style="text-decoration: line-through; color: #888; margin-right: 10px;">$ ${product.oldPrice.toFixed(0)} COP</span>` : ''}
+                        $ ${product.price.toFixed(0)} COP
                     </p>
                     <button class="btn add-to-cart" data-id="${product.id}" data-type="${container.id === 'men-products' ? 'men' : (container.id === 'women-products' ? 'women' : 'featured')}">
                         Añadir al Carrito
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="cart-item-info">
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-brand">${item.brand}</div>
-                    <div class="cart-item-price">${item.price.toFixed(2)} € x ${item.quantity} = ${itemTotal.toFixed(2)} €</div>
+                    <div class="cart-item-price">$ ${item.price.toFixed(0)} COP x ${item.quantity} = $ ${itemTotal.toFixed(0)} COP</div>
                 </div>
                 <div class="cart-item-quantity">
                     <button class="quantity-btn decrease" data-id="${item.id}">-</button>
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cartItemsContainer.appendChild(cartItem);
         });
         
-        cartTotal.textContent = total.toFixed(2);
+        cartTotal.textContent = total.toFixed(0);
         
         // Añadir eventos a los botones de cantidad y eliminar
         const decreaseButtons = cartItemsContainer.querySelectorAll('.decrease');
@@ -380,10 +380,10 @@ document.addEventListener('DOMContentLoaded', function() {
         cart.forEach(item => {
             const itemTotal = item.price * item.quantity;
             total += itemTotal;
-            message += `- ${item.name} (${item.brand}): ${item.quantity} x ${item.price.toFixed(2)} € = ${itemTotal.toFixed(2)} €\n`;
+            message += `- ${item.name} (${item.brand}): ${item.quantity} x $ ${item.price.toFixed(0)} COP = $ ${itemTotal.toFixed(0)} COP\n`;
         });
         
-        message += `\n*TOTAL: ${total.toFixed(2)} €*`;
+        message += `\n*TOTAL: $ ${total.toFixed(0)} COP*`;
         
         // Codificar el mensaje para WhatsApp
         const encodedMessage = encodeURIComponent(message);
@@ -421,11 +421,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemTotal = item.price * item.quantity;
             orderText += `${item.name} (${item.brand})\n`;
             orderText += `Cantidad: ${item.quantity}\n`;
-            orderText += `Precio unitario: ${item.price.toFixed(2)} €\n`;
-            orderText += `Subtotal: ${itemTotal.toFixed(2)} €\n\n`;
+            orderText += `Precio unitario: $ ${item.price.toFixed(0)} COP\n`;
+            orderText += `Subtotal: $ ${itemTotal.toFixed(0)} COP\n\n`;
         });
         
-        orderText += `TOTAL: ${total.toFixed(2)} €`;
+        orderText += `TOTAL: $ ${total.toFixed(0)} COP`;
         
         // Crear archivo para descargar
         const blob = new Blob([orderText], { type: 'text/plain' });

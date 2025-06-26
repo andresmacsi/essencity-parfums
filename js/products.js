@@ -5,7 +5,7 @@ const productsData = {
             id: 'm1',
             name: 'Blue de Chanel',
             brand: 'Chanel',
-            price: 89.99,
+            price: 404955,
             category: 'elegant',
             description: 'Una fragancia elegante y sofisticada con notas amaderadas y aromáticas.',
             image: 'images/products/men-placeholder.svg'
@@ -14,7 +14,7 @@ const productsData = {
             id: 'm2',
             name: 'Sauvage',
             brand: 'Dior',
-            price: 94.50,
+            price: 425250,
             category: 'elegant',
             description: 'Fragancia masculina potente con notas de bergamota y pimienta.',
             image: 'images/products/sauvage-custom.svg'
@@ -23,7 +23,7 @@ const productsData = {
             id: 'm3',
             name: 'Acqua di Gio',
             brand: 'Giorgio Armani',
-            price: 78.75,
+            price: 354375,
             category: 'casual',
             description: 'Aroma fresco y marino inspirado en la belleza de Pantelleria.',
             image: 'images/products/men-placeholder.svg'
@@ -32,7 +32,7 @@ const productsData = {
             id: 'm4',
             name: 'Le Male',
             brand: 'Jean Paul Gaultier',
-            price: 65.99,
+            price: 296955,
             category: 'casual',
             description: 'Fragancia oriental con notas de lavanda, vainilla y menta.',
             image: 'images/products/men-placeholder.svg'
@@ -41,7 +41,7 @@ const productsData = {
             id: 'm5',
             name: 'Invictus',
             brand: 'Paco Rabanne',
-            price: 72.25,
+            price: 325125,
             category: 'sport',
             description: 'Fragancia fresca y deportiva con notas de laurel y madera de guayaco.',
             image: 'images/products/men-placeholder.svg'
@@ -50,7 +50,7 @@ const productsData = {
             id: 'm6',
             name: 'Cool Water',
             brand: 'Davidoff',
-            price: 45.50,
+            price: 204750,
             category: 'sport',
             description: 'Fragancia fresca y acuática con notas de menta y lavanda.',
             image: 'images/products/men-placeholder.svg'
@@ -59,7 +59,7 @@ const productsData = {
             id: 'm7',
             name: 'One Million',
             brand: 'Paco Rabanne',
-            price: 79.99,
+            price: 359955,
             category: 'elegant',
             description: 'Fragancia especiada y frutal con un toque de cuero y sangre de mandarina.',
             image: 'images/products/men-placeholder.svg'
@@ -68,7 +68,7 @@ const productsData = {
             id: 'm8',
             name: 'Boss Bottled',
             brand: 'Hugo Boss',
-            price: 68.75,
+            price: 309375,
             category: 'casual',
             description: 'Fragancia elegante con notas de manzana, canela y sándalo.',
             image: 'images/products/men-placeholder.svg'
@@ -77,7 +77,7 @@ const productsData = {
             id: 'm9',
             name: 'Versace Eros',
             brand: 'Versace',
-            price: 82.50,
+            price: 371250,
             category: 'elegant',
             description: 'Fragancia sensual y potente con notas de menta, manzana verde y vainilla.',
             image: 'images/products/men-placeholder.svg'
@@ -86,7 +86,7 @@ const productsData = {
             id: 'm10',
             name: 'Terre d\'Hermès',
             brand: 'Hermès',
-            price: 95.75,
+            price: 430875,
             category: 'elegant',
             description: 'Fragancia terrosa y mineral con notas de naranja, pimienta y vetiver.',
             image: 'images/products/men-placeholder.svg'
@@ -95,7 +95,7 @@ const productsData = {
             id: 'm11',
             name: 'Eternity',
             brand: 'Calvin Klein',
-            price: 59.99,
+            price: 269955,
             category: 'casual',
             description: 'Fragancia aromática con notas de lavanda, jazmín y sándalo.',
             image: 'images/products/men-placeholder.svg'
@@ -104,7 +104,7 @@ const productsData = {
             id: 'm12',
             name: 'Polo Blue',
             brand: 'Ralph Lauren',
-            price: 67.50,
+            price: 303750,
             category: 'sport',
             description: 'Fragancia fresca y deportiva con notas acuáticas y cítricas.',
             image: 'images/products/men-placeholder.svg'
