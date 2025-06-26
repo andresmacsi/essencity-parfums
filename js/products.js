@@ -127,7 +127,7 @@ const productsData = {
             price: 270000,
             category: 'floral gourmand',
             description: 'Una fragancia floral gourmand con notas de flores blancas, frutos rojos y vainilla dulce. Ideal para un toque femenino y encantador.',
-            image: 'images/products/lattafa-yara-candy.jpg'  
+            image: 'images/products/lattafa-yara-candy.webp'  
         },
         {
             id: 'w3',
