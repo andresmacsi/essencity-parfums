@@ -115,7 +115,7 @@ const productsData = {
             id: 'w1',
             name: 'Coco Mademoiselle',
             brand: 'Chanel',
-            price: 105.50,
+            price: 474750,
             category: 'oriental',
             description: 'Fragancia oriental y fresca con notas de naranja, jazmín y pachulí.',
             image: 'images/products/women-placeholder.svg'
@@ -124,7 +124,7 @@ const productsData = {
             id: 'w2',
             name: 'J\'adore',
             brand: 'Dior',
-            price: 98.75,
+            price: 444375,
             category: 'floral',
             description: 'Fragancia floral sofisticada con notas de mandarina, jazmín y rosa.',
             image: 'images/products/jadore-custom.svg'
@@ -133,7 +133,7 @@ const productsData = {
             id: 'w3',
             name: 'La Vie Est Belle',
             brand: 'Lancôme',
-            price: 89.99,
+            price: 404955,
             category: 'frutal',
             description: 'Fragancia gourmand con notas de grosella negra, pera y praliné.',
             image: 'images/products/women-placeholder.svg'
@@ -142,7 +142,7 @@ const productsData = {
             id: 'w4',
             name: 'Good Girl',
             brand: 'Carolina Herrera',
-            price: 92.25,
+            price: 415125,
             category: 'oriental',
             description: 'Fragancia oriental floral con notas de almendra, café y cacao.',
             image: 'images/products/women-placeholder.svg'
@@ -151,7 +151,7 @@ const productsData = {
             id: 'w5',
             name: 'Black Opium',
             brand: 'Yves Saint Laurent',
-            price: 95.50,
+            price: 429750,
             category: 'oriental',
             description: 'Fragancia adictiva con notas de café, vainilla y flores blancas.',
             image: 'images/products/women-placeholder.svg'
@@ -160,7 +160,7 @@ const productsData = {
             id: 'w6',
             name: 'Daisy',
             brand: 'Marc Jacobs',
-            price: 72.99,
+            price: 328455,
             category: 'floral',
             description: 'Fragancia fresca y floral con notas de violeta, jazmín y madera.',
             image: 'images/products/women-placeholder.svg'
@@ -169,7 +169,7 @@ const productsData = {
             id: 'w7',
             name: 'Chance',
             brand: 'Chanel',
-            price: 88.25,
+            price: 397125,
             category: 'floral',
             description: 'Fragancia floral con notas de pimienta rosa, jazmín y pachulí.',
             image: 'images/products/women-placeholder.svg'
@@ -178,7 +178,7 @@ const productsData = {
             id: 'w8',
             name: 'Miss Dior',
             brand: 'Dior',
-            price: 99.75,
+            price: 448875,
             category: 'frutal',
             description: 'Fragancia floral y afrutada con notas de mandarina, rosa y pachulí.',
             image: 'images/products/women-placeholder.svg'
@@ -187,7 +187,7 @@ const productsData = {
             id: 'w9',
             name: 'Flowerbomb',
             brand: 'Viktor & Rolf',
-            price: 103.25,
+            price: 464625,
             category: 'floral',
             description: 'Fragancia explosiva de flores con notas de jazmín, rosa y orquídea.',
             image: 'images/products/women-placeholder.svg'
@@ -196,7 +196,7 @@ const productsData = {
             id: 'w10',
             name: 'Sí',
             brand: 'Giorgio Armani',
-            price: 97.50,
+            price: 438750,
             category: 'frutal',
             description: 'Fragancia elegante con notas de grosella negra, rosa y vainilla.',
             image: 'images/products/women-placeholder.svg'
@@ -205,7 +205,7 @@ const productsData = {
             id: 'w11',
             name: 'Bloom',
             brand: 'Gucci',
-            price: 104.99,
+            price: 472455,
             category: 'floral',
             description: 'Fragancia floral intensa con notas de jazmín, rangoon creeper y nardo.',
             image: 'images/products/women-placeholder.svg'
@@ -214,7 +214,7 @@ const productsData = {
             id: 'w12',
             name: 'Light Blue',
             brand: 'Dolce & Gabbana',
-            price: 85.75,
+            price: 385875,
             category: 'frutal',
             description: 'Fragancia fresca y mediterránea con notas de manzana, cedro y ámbar.',
             image: 'images/products/women-placeholder.svg'
@@ -225,8 +225,8 @@ const productsData = {
             id: 'f1',
             name: 'Set Sauvage',
             brand: 'Dior',
-            price: 125.00,
-            oldPrice: 150.00,
+            price: 562500,
+            oldPrice: 675000,
             description: 'Set exclusivo que incluye Eau de Parfum 100ml y Aftershave 50ml.',
             image: 'images/products/set-placeholder.svg'
         },
@@ -234,8 +234,8 @@ const productsData = {
             id: 'f2',
             name: 'Set J\'adore',
             brand: 'Dior',
-            price: 130.00,
-            oldPrice: 160.00,
+            price: 585000,
+            oldPrice: 720000,
             description: 'Set de lujo con Eau de Parfum 100ml y loción corporal 75ml.',
             image: 'images/products/set-placeholder.svg'
         },
@@ -243,8 +243,8 @@ const productsData = {
             id: 'f3',
             name: 'Discovery Set Masculino',
             brand: 'Multi-marca',
-            price: 65.00,
-            oldPrice: 90.00,
+            price: 292500,
+            oldPrice: 405000,
             description: 'Colección de 5 miniaturas de las fragancias más populares para hombre.',
             image: 'images/products/set-placeholder.svg'
         },
@@ -252,8 +252,8 @@ const productsData = {
             id: 'f4',
             name: 'Set Good Girl',
             brand: 'Carolina Herrera',
-            price: 115.00,
-            oldPrice: 140.00,
+            price: 517500,
+            oldPrice: 630000,
             description: 'Set de lujo con Eau de Parfum 80ml y loción corporal 100ml.',
             image: 'images/products/set-placeholder.svg'
         },
@@ -261,8 +261,8 @@ const productsData = {
             id: 'f5',
             name: 'Discovery Set Femenino',
             brand: 'Multi-marca',
-            price: 65.00,
-            oldPrice: 90.00,
+            price: 292500,
+            oldPrice: 405000,
             description: 'Colección de 5 miniaturas de las fragancias más populares para mujer.',
             image: 'images/products/set-placeholder.svg'
         }
