@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cargar productos
     loadProducts(productsData.men, menProductsContainer);
     loadProducts(productsData.women, womenProductsContainer);
-    loadFeaturedProducts(productsData.featured, featuredContainer);
+    loadProducts(productsData.featured, featuredContainer);
     updateCartCount();
     
     // Eventos
@@ -61,43 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         products.forEach(product => {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
-            productCard.setAttribute('data-category', product.category);
+            productCard.setAttribute('data-category', product.category || '');
             
-            productCard.innerHTML = `
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
-                </div>
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <p class="brand">${product.brand}</p>
-                    <p class="description">${product.description}</p>
-                    <p class="price">${product.price.toFixed(2)} €</p>
-                    <button class="btn add-to-cart" data-id="${product.id}" data-type="${container.id === 'men-products' ? 'men' : 'women'}">
-                        Añadir al Carrito
-                    </button>
-                </div>
-            `;
-            
-            container.appendChild(productCard);
-        });
-        
-        // Añadir evento a los botones "Añadir al Carrito"
-        const addToCartButtons = container.querySelectorAll('.add-to-cart');
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-id');
-                const productType = this.getAttribute('data-type');
-                addToCart(productId, productType);
-            });
-        });
-    }
-    
-    // Función para cargar productos destacados
-    function loadFeaturedProducts(products, container) {
-        container.innerHTML = '';
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
+            const isDiscounted = product.oldPrice !== undefined;
             
             productCard.innerHTML = `
                 <div class="product-image">
@@ -108,10 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="brand">${product.brand}</p>
                     <p class="description">${product.description}</p>
                     <p class="price">
-                        <span style="text-decoration: line-through; color: #888; margin-right: 10px;">${product.oldPrice.toFixed(2)} €</span>
+                        ${isDiscounted ? `<span style="text-decoration: line-through; color: #888; margin-right: 10px;">${product.oldPrice.toFixed(2)} €</span>` : ''}
                         ${product.price.toFixed(2)} €
                     </p>
-                    <button class="btn add-to-cart" data-id="${product.id}" data-type="featured">
+                    <button class="btn add-to-cart" data-id="${product.id}" data-type="${container.id === 'men-products' ? 'men' : (container.id === 'women-products' ? 'women' : 'featured')}">
                         Añadir al Carrito
                     </button>
                 </div>
@@ -154,12 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function addToCart(productId, productType) {
         let product;
         
-        if (productType === 'men') {
-            product = productsData.men.find(p => p.id === productId);
-        } else if (productType === 'women') {
-            product = productsData.women.find(p => p.id === productId);
-        } else if (productType === 'featured') {
-            product = productsData.featured.find(p => p.id === productId);
+        // Buscar el producto en el array correspondiente
+        if (productsData[productType]) {
+            product = productsData[productType].find(p => p.id === productId);
         }
         
         if (!product) return;
@@ -387,14 +350,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
+        const department = document.getElementById('department').value;
+        const city = document.getElementById('city').value;
         const address = document.getElementById('address').value;
         
+        // Validar que se haya seleccionado departamento y ciudad
+        if (!department || !city) {
+            showNotification('Por favor selecciona un departamento y una ciudad');
+            return;
+        }
+        
+        // Generar ID de pedido único (fecha + 6 caracteres aleatorios)
+        const orderId = generateOrderId();
+        
         // Generar el mensaje para WhatsApp
-        let message = `*Nuevo Pedido de ${name}*\n\n`;
-        message += `*Datos de contacto:*\n`;
+        let message = `*NUEVO PEDIDO #${orderId}*\n\n`;
+        message += `*Datos del cliente:*\n`;
+        message += `ID Pedido: ${orderId}\n`;
         message += `Nombre: ${name}\n`;
         message += `Email: ${email}\n`;
         message += `Teléfono: ${phone}\n`;
+        message += `Departamento: ${department}\n`;
+        message += `Ciudad: ${city}\n`;
         message += `Dirección: ${address}\n\n`;
         
         message += `*Productos:*\n`;
@@ -410,28 +387,33 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Codificar el mensaje para WhatsApp
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+        // Usar el número de WhatsApp de la empresa
+        const companyWhatsApp = "+573154874415";
+        const whatsappURL = `https://wa.me/${companyWhatsApp}?text=${encodedMessage}`;
         
         // Abrir WhatsApp en una nueva ventana
         window.open(whatsappURL, '_blank');
         
         // Generar archivo de pedido para descargar
-        generateOrderFile(name, email, phone, address, total);
+        generateOrderFile(orderId, name, email, phone, department, city, address, total);
         
         // Vaciar carrito y cerrar modal
         clearCart();
         closeModals();
         
-        showNotification('¡Gracias por tu pedido!');
+        showNotification('¡Gracias por tu pedido! Redirigiendo a WhatsApp...');
     }
       // Función para generar archivo de pedido
-    function generateOrderFile(name, email, phone, address, total) {
-        let orderText = `PEDIDO - ESSENCITY PARFUMS\n`;
+    function generateOrderFile(orderId, name, email, phone, department, city, address, total) {
+        let orderText = `PEDIDO #${orderId} - ESSENCITY PARFUMS\n`;
         orderText += `Fecha: ${new Date().toLocaleDateString()}\n\n`;
         orderText += `DATOS DEL CLIENTE:\n`;
+        orderText += `ID Pedido: ${orderId}\n`;
         orderText += `Nombre: ${name}\n`;
         orderText += `Email: ${email}\n`;
         orderText += `Teléfono: ${phone}\n`;
+        orderText += `Departamento: ${department}\n`;
+        orderText += `Ciudad: ${city}\n`;
         orderText += `Dirección: ${address}\n\n`;
         
         orderText += `PRODUCTOS:\n`;
@@ -450,11 +432,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `pedido_${name.replace(/\s+/g, '_')}_${Date.now()}.txt`;
+        a.download = `pedido_${orderId}_${name.replace(/\s+/g, '_')}.txt`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
+    }
+    
+    // Función para generar un ID de pedido único
+    function generateOrderId() {
+        const date = new Date();
+        const year = date.getFullYear().toString().slice(-2); // Últimos 2 dígitos del año
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        const random = Math.random().toString(36).substring(2, 8).toUpperCase(); // 6 caracteres aleatorios
+        return `EP${year}${month}${day}-${random}`;
     }
     
     // Cerrar modales al hacer clic fuera del contenido
