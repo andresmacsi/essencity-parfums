@@ -145,6 +145,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Solución para la función que carga las ciudades en app.js
+
+    /**
+     * Actualiza las opciones de ciudades basado en el departamento seleccionado
+     * @param {string} departamento - El departamento seleccionado
+     */
+    function actualizarCiudades(departamento) {
+        const ciudadSelect = document.getElementById('ciudad');
+        ciudadSelect.innerHTML = '<option value="">Selecciona una ciudad</option>';
+        
+        // Verificar si el departamento existe en el objeto citiesData
+        if (citiesData[departamento]) {
+            // Ordenar las ciudades alfabéticamente para mejor usabilidad
+            const ciudadesOrdenadas = [...citiesData[departamento]].sort();
+            
+            // Agregar cada ciudad como una opción
+            ciudadesOrdenadas.forEach(ciudad => {
+                const option = document.createElement('option');
+                option.value = ciudad;
+                option.textContent = ciudad;
+                ciudadSelect.appendChild(option);
+            });
+            
+            // Habilitar el selector de ciudades
+            ciudadSelect.disabled = false;
+        } else {
+            // Si no hay ciudades, deshabilitar el selector
+            ciudadSelect.disabled = true;
+        }
+        
+        // Log para depuración
+        console.log(`Departamento: ${departamento}, Ciudades cargadas: ${citiesData[departamento] ? citiesData[departamento].length : 0}`);
+    }
+
+    // Asegurarse que el evento change del selector de departamentos llama a esta función
+    departmentSelect.addEventListener('change', function() {
+        actualizarCiudades(this.value);
+    });
+    
     // Evento para el cambio de departamento
     departmentSelect.addEventListener('change', function() {
         const selectedDepartment = this.value;
