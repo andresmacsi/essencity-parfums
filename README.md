@@ -53,7 +53,7 @@ Para desplegar este proyecto en GitHub Pages:
 2. Ve a la configuración del repositorio en GitHub
 3. En la sección "GitHub Pages", selecciona la rama main como fuente
 4. Guarda los cambios y espera unos minutos
-5. Tu sitio estará disponible en https://andresmacsi.github.io/essencity-parfums/
+5. Tu sitio estará disponible en https://TU_USUARIO.github.io/essencity-parfums/
 
 ## Personalización
 
